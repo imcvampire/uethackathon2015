@@ -12,25 +12,50 @@
 <!-- header -->
 
 <div class="row">
-    <div class="col-sm-8">
+    <div class="col-sm-9">
         <div id="accordion-resizer" class="ui-widget-content">
             <div id="accordion">
                 <h3>Section 1</h3>
 
-                <div>hello</div>
+                <div>
+                    <ul class="list-group">
+                        <li class="list-group-item">1</li>
+                        <li class="list-group-item">2</li>
+                    </ul>
+                </div>
                 <h3>Section 2</h3>
 
+                <div>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
                 <h3>Section 3</h3>
 
+                <div>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
                 <h3>Section 4</h3>
 
+                <div>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
                 <h3>5</h3>
 
+                <div>
+                    <ul>
+                        <li></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
-    <div class="col-sm-4">
-        <button type="submit" id="save"></button>
+    <div class="col-sm-3">
+        <button type="submit" id="save" class="btn btn-block btn-success">Save</button>
     </div>
 </div>
 
@@ -39,6 +64,7 @@
 <script rel="script" type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script rel="script" type="text/javascript" src="js/bootstrap.min.js"></script>
 <script>
+    //    list topic
     $(function () {
         $("#accordion").accordion({
             heightStyle: "fill"
@@ -50,6 +76,10 @@
                 $("#accordion").accordion("refresh");
             }
         });
+    });
+    //    select
+    $(function () {
+        $("#selectable").selectable();
     });
 </script>
 </body>

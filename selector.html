@@ -15,27 +15,27 @@
     <div class="col-sm-9">
         <div id="accordion-resizer" class="ui-widget-content">
             <div id="accordion">
-                <h3>Section 1</h3>
+                <h3>Cần biết</h3>
 
-                <div>
+                <div style="height: 1000px;">
                     <ul class="list-group">
                         <li class="list-group-item">1</li>
                         <li class="list-group-item">2</li>
                     </ul>
                 </div>
-                <h3>Section 2</h3>
+                <h3>Website</h3>
 
                 <div>
                 </div>
-                <h3>Section 3</h3>
+                <h3>Người</h3>
 
                 <div>
                 </div>
-                <h3>Section 4</h3>
+                <h3>Sách</h3>
 
                 <div>
                 </div>
-                <h3>5</h3>
+                <h3>Kinh nghiệm</h3>
 
                 <div>
                 </div>
@@ -43,7 +43,10 @@
         </div>
     </div>
     <div class="col-sm-3">
-        <button type="submit" id="save" class="btn btn-block btn-success">Save</button>
+        <div id="selected">
+            <button type="submit" id="save" class="btn btn-block btn-success">Save</button>
+        </div>
+
     </div>
 </div>
 
@@ -68,6 +71,19 @@
     //    select
     $(function () {
         $("#selectable").selectable();
+    });
+    //    float
+    $(function () {
+        function position() {
+            $("#selected").position({
+                of: $(".col-sm-3"),
+                my: "left top",
+                at: "left top",
+                collision: "none none"
+            });
+        }
+
+        position();
     });
 </script>
 </body>

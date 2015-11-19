@@ -6,16 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>How to do</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
 </head>
 <body>
 <!-- header -->
 
 <div class="row">
-    <div class="col-sm-12">
-
-    </div>
     <div class="col-sm-8">
+        <div id="accordion-resizer" class="ui-widget-content">
+            <div id="accordion">
+                <h3>Section 1</h3>
 
+                <div>hello</div>
+                <h3>Section 2</h3>
+
+                <h3>Section 3</h3>
+
+                <h3>Section 4</h3>
+
+                <h3>5</h3>
+
+            </div>
+        </div>
     </div>
     <div class="col-sm-4">
         <button type="submit" id="save"></button>
@@ -24,7 +36,21 @@
 
 <!-- script -->
 <script rel="script" type="text/javascript" src="js/jquery.min.js"></script>
-<script src="js/jquery-ui.min.js"></script>
+<script rel="script" type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script rel="script" type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+    $(function () {
+        $("#accordion").accordion({
+            heightStyle: "fill"
+        });
+    });
+    $(function () {
+        $("#accordion-resizer").resizable({
+            resize: function () {
+                $("#accordion").accordion("refresh");
+            }
+        });
+    });
+</script>
 </body>
 </html>

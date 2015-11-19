@@ -3,57 +3,57 @@
 * Copyright jQuery Foundation and other contributors; Licensed MIT */
 
 .ui-widget {
-    font-family: Segoe UI, Arial, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
     font-size: 1.1em
 }
 .ui-widget .ui-widget {
     font-size: 1em
 }
 .ui-widget input, .ui-widget select, .ui-widget textarea, .ui-widget button {
-    font-family: Segoe UI, Arial, sans-serif;
+    font-family: Verdana, Arial, sans-serif;
     font-size: 1em
 }
 .ui-widget-content {
-    border: 1px solid #666;
-    background: #000 url("images/ui-bg_inset-soft_25_000000_1x100.png") 50% bottom repeat-x;
-    color: #fff
+    border: 1px solid #a6c9e2;
+    background: #fcfdfd url("images/ui-bg_inset-hard_100_fcfdfd_1x100.png") 50% bottom repeat-x;
+    color: #222
 }
 .ui-widget-content a {
-    color: #fff
+    color: #222
 }
 .ui-widget-header {
-    border: 1px solid #333;
-    background: #333 url("images/ui-bg_gloss-wave_25_333333_500x100.png") 50% 50% repeat-x;
-    color: #fff;
+    border: 1px solid #4297d7;
+    background: #2191c0 url("images/ui-bg_gloss-wave_75_2191c0_500x100.png") 50% 50% repeat-x;
+    color: #eaf5f7;
     font-weight: bold
 }
 .ui-widget-header a {
-    color: #fff
+    color: #eaf5f7
 }
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
-    border: 1px solid #666;
-    background: #555 url("images/ui-bg_glass_20_555555_1x400.png") 50% 50% repeat-x;
-    font-weight: bold;
-    color: #eee
-}
-.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
-    color: #eee;
-    text-decoration: none
-}
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
-    border: 1px solid #59b4d4;
-    background: #0078a3 url("images/ui-bg_glass_40_0078a3_1x400.png") 50% 50% repeat-x;
-    font-weight: bold;
+    border: 1px solid #77d5f7;
+    background: #0078ae url("images/ui-bg_glass_45_0078ae_1x400.png") 50% 50% repeat-x;
+    font-weight: normal;
     color: #fff
 }
-.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited, .ui-state-focus a, .ui-state-focus a:hover, .ui-state-focus a:link, .ui-state-focus a:visited {
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
     color: #fff;
     text-decoration: none
 }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+    border: 1px solid #448dae;
+    background: #79c9ec url("images/ui-bg_glass_75_79c9ec_1x400.png") 50% 50% repeat-x;
+    font-weight: normal;
+    color: #026890
+}
+.ui-state-hover a, .ui-state-hover a:hover, .ui-state-hover a:link, .ui-state-hover a:visited, .ui-state-focus a, .ui-state-focus a:hover, .ui-state-focus a:link, .ui-state-focus a:visited {
+    color: #026890;
+    text-decoration: none
+}
 .ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
-    border: 1px solid #ffaf0f;
-    background: #f58400 url("images/ui-bg_inset-soft_30_f58400_1x100.png") 50% 50% repeat-x;
-    font-weight: bold;
+    border: 1px solid #acdd4a;
+    background: #6eac2c url("images/ui-bg_gloss-wave_50_6eac2c_500x100.png") 50% 50% repeat-x;
+    font-weight: normal;
     color: #fff
 }
 .ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
@@ -61,23 +61,23 @@
     text-decoration: none
 }
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
-    border: 1px solid #ccc;
-    background: #eee url("images/ui-bg_highlight-soft_80_eeeeee_1x100.png") 50% top repeat-x;
-    color: #2e7db2
+    border: 1px solid #fcd113;
+    background: #f8da4e url("images/ui-bg_glass_55_f8da4e_1x400.png") 50% 50% repeat-x;
+    color: #915608
 }
 .ui-state-highlight a, .ui-widget-content .ui-state-highlight a, .ui-widget-header .ui-state-highlight a {
-    color: #2e7db2
+    color: #915608
 }
 .ui-state-error, .ui-widget-content .ui-state-error, .ui-widget-header .ui-state-error {
-    border: 1px solid #ffb73d;
-    background: #ffc73d url("images/ui-bg_glass_40_ffc73d_1x400.png") 50% 50% repeat-x;
-    color: #111
+    border: 1px solid #cd0a0a;
+    background: #e14f1c url("images/ui-bg_gloss-wave_45_e14f1c_500x100.png") 50% top repeat-x;
+    color: #fff
 }
 .ui-state-error a, .ui-widget-content .ui-state-error a, .ui-widget-header .ui-state-error a {
-    color: #111
+    color: #fff
 }
 .ui-state-error-text, .ui-widget-content .ui-state-error-text, .ui-widget-header .ui-state-error-text {
-    color: #111
+    color: #fff
 }
 .ui-priority-primary, .ui-widget-content .ui-priority-primary, .ui-widget-header .ui-priority-primary {
     font-weight: bold
@@ -100,25 +100,25 @@
     height: 16px
 }
 .ui-icon, .ui-widget-content .ui-icon {
-    background-image: url("images/ui-icons_cccccc_256x240.png")
+    background-image: url("images/ui-icons_0078ae_256x240.png")
 }
 .ui-widget-header .ui-icon {
-    background-image: url("images/ui-icons_ffffff_256x240.png")
+    background-image: url("images/ui-icons_d8e7f3_256x240.png")
 }
 .ui-state-default .ui-icon {
-    background-image: url("images/ui-icons_cccccc_256x240.png")
+    background-image: url("images/ui-icons_e0fdff_256x240.png")
 }
 .ui-state-hover .ui-icon, .ui-state-focus .ui-icon {
-    background-image: url("images/ui-icons_ffffff_256x240.png")
+    background-image: url("images/ui-icons_056b93_256x240.png")
 }
 .ui-state-active .ui-icon {
-    background-image: url("images/ui-icons_222222_256x240.png")
+    background-image: url("images/ui-icons_f5e175_256x240.png")
 }
 .ui-state-highlight .ui-icon {
-    background-image: url("images/ui-icons_4b8e0b_256x240.png")
+    background-image: url("images/ui-icons_f7a50d_256x240.png")
 }
 .ui-state-error .ui-icon, .ui-state-error-text .ui-icon {
-    background-image: url("images/ui-icons_a83300_256x240.png")
+    background-image: url("images/ui-icons_fcd113_256x240.png")
 }
 .ui-icon-blank {
     background-position: 16px 16px
@@ -646,27 +646,27 @@
     background-position: -80px -224px
 }
 .ui-corner-all, .ui-corner-top, .ui-corner-left, .ui-corner-tl {
-    border-top-left-radius: 6px
+    border-top-left-radius: 5px
 }
 .ui-corner-all, .ui-corner-top, .ui-corner-right, .ui-corner-tr {
-    border-top-right-radius: 6px
+    border-top-right-radius: 5px
 }
 .ui-corner-all, .ui-corner-bottom, .ui-corner-left, .ui-corner-bl {
-    border-bottom-left-radius: 6px
+    border-bottom-left-radius: 5px
 }
 .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
-    border-bottom-right-radius: 6px
+    border-bottom-right-radius: 5px
 }
 .ui-widget-overlay {
-    background: #5c5c5c;
-    opacity: .8;
-    filter: Alpha(Opacity=80)
+    background: #aaa;
+    opacity: .3;
+    filter: Alpha(Opacity=30)
 }
 .ui-widget-shadow {
-    margin: -7px 0 0 -7px;
-    padding: 7px;
-    background: #ccc;
-    opacity: .6;
-    filter: Alpha(Opacity=60);
-    border-radius: 8px
+    margin: 5px 0 0 5px;
+    padding: 0;
+    background: #999;
+    opacity: .45;
+    filter: Alpha(Opacity=45);
+    border-radius: 5px
 }

@@ -1,0 +1,8 @@
+@media (min-width: 768px) {
+    #contact-email, #contact-name {
+        width: 80%;
+    }
+    .contact-form-email {
+        text-align: right;
+    }
+}

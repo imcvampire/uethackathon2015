@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>How to do</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
+</head>
+<body>
+<div class="container">
+    <img class="img-responsive">
+    <button id="open-login" href="#login-form" class="btn pull-right">Đăng nhập và đăng kí</button>
+</div>
+<!-- popup -->
+<div id="login-form" style="display:none; border-radius: 6px;">
+    <div class="social">
+        <div class="clearfix">
+            <div class="btn-group btn-group-justified" role="group">
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Đăng nhập bằng Facebook</button>
+                </div>
+                <div class="btn-group" role="group">
+                    <button type="button" class="btn btn-default">Đăng nhập bằng Google</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div id="email">
+        <div id="email-login">
+            <button class="btn btn-block" id="email-signup-on">Đăng kí bằng email</button>
+            <hr>
+            <form class="form-group">
+                <input type="email" class="form-control" placeholder="Email address">
+            </form>
+            <form class="form-group">
+                <input type="password" class="form-control" placeholder="Password">
+            </form>
+            <div class="checkbox">
+                <label><input id="remember" type="checkbox">Ghi nhớ</label>
+            </div>
+            <button class="btn btn-primary btn-block">Đăng nhập</button>
+            <button class="btn btn-danger btn-block btn-sm" href="#">Quên mật khẩu ?</button>
+        </div>
+        <div id="email-signup" style="display: none">
+            <button class="btn btn-block" id="email-login-on">Đăng nhập</button>
+            <hr>
+            <form class="form-group">
+                <input type="text" class="form-control" placeholder="Họ và tên">
+            </form>
+            <form class="form-group">
+                <input type="email" class="form-control" placeholder="Email address">
+            </form>
+            <form class="form-group">
+                <input type="password" class="form-control" placeholder="Password">
+            </form>
+            <button class="btn btn-primary btn-block" href="#">Register</button>
+        </div>
+    </div>
+</div>
+
+<!-- script -->
+<script rel="script" type="text/javascript" src="js/jquery.min.js"></script>
+<script rel="script" type="text/javascript" src="js/bootstrap.min.js"></script>
+<script rel="script" type="text/javascript" src="js/jquery.leanModal.min.js"></script>
+<script>
+    $("#open-login").leanModal({
+        top: 100,
+        overlay: 0.6,
+        closeButton: ".modal_close"
+    });
+    $(function () {
+        $("#email-signup-on").click(function () {
+            $("#email-login").hide();
+            $("#email-signup").show();
+            return false;
+        });
+        $("#email-login-on").click(function () {
+            $("#email-signup").hide();
+            $("#email-login").show();
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

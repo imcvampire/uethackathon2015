@@ -5,46 +5,104 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>How to do</title>
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
+    <link rel="stylesheet" type="text/css" href="css/selector.css">
 </head>
 <body>
 <!-- header -->
 
 <div class="row">
     <div class="col-sm-9">
-        <div id="accordion-resizer" class="ui-widget-content">
-            <div id="accordion">
-                <h3>Cần biết</h3>
+        <div id="tabs">
+            <ul>
+                <li><a href="#can-biet">Cần biết</a></li>
+                <li><a href="#web">Web</a></li>
+                <li><a href="#nguoi">Người</a></li>
+                <li><a href="#sach">Sách</a></li>
+                <li><a href="#kinh-nghiem">Kinh nghiệm</a></li>
+            </ul>
+            <div id="can-biet">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover table-bordered">
+                        <thead>
 
-                <div style="height: 1000px;">
-                    <ul class="list-group">
-                        <li class="list-group-item">1</li>
-                        <li class="list-group-item">2</li>
-                    </ul>
-                </div>
-                <h3>Website</h3>
+                        <th style="width: 20px"><input type="checkbox"></th>
+                        <th>Nội dung</th>
+                        <th style="width: auto">Like</th>
+                        <th style="width: auto">Comment</th>
 
-                <div>
+                        </thead>
+                        <tbody>
+                        <tr title="test">
+                            <td style="width: 20px"><input type="checkbox"></td>
+                            <td>hello</td>
+                            <td style="width: 95px">1</td>
+                            <td style="width: 95px">2</td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
-                <h3>Người</h3>
-
-                <div>
-                </div>
-                <h3>Sách</h3>
-
-                <div>
-                </div>
-                <h3>Kinh nghiệm</h3>
-
-                <div>
-                </div>
+                <button type="submit" class="btn btn-success pull-left btn-select">Xem thêm</button>
+                <button type="submit" class="btn btn-success pull-right btn-select">Đóng góp</button>
+                <div class="clearfix"></div>
+            </div>
+            <div id="web">
+                <ul class="select-list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button type="submit" class="btn btn-success pull-left btn-select">Xem thêm</button>
+                <button type="submit" class="btn btn-success pull-right btn-select">Đóng góp</button>
+                <div class="clearfix"></div>
+            </div>
+            <div id="nguoi">
+                <ul class="select-list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button type="submit" class="btn btn-success pull-left btn-select">Xem thêm</button>
+                <button type="submit" class="btn btn-success pull-right btn-select">Đóng góp</button>
+                <div class="clearfix"></div>
+            </div>
+            <div id="sach">
+                <ul class="select-list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button type="submit" class="btn btn-success pull-left btn-select">Xem thêm</button>
+                <button type="submit" class="btn btn-success pull-right btn-select">Đóng góp</button>
+                <div class="clearfix"></div>
+            </div>
+            <div id="kinh-nghiem">
+                <ul class="select-list">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+                <button type="submit" class="btn btn-success pull-left btn-select">Xem thêm</button>
+                <button type="submit" class="btn btn-success pull-right btn-select">Đóng góp</button>
+                <div class="clearfix"></div>
             </div>
         </div>
     </div>
     <div class="col-sm-3">
         <div id="selected">
-            <button type="submit" id="save" class="btn btn-block btn-success">Save</button>
+            <div id="selected-list">
+                <p class="text-center">Bạn đã chọn</p>
+            </div>
+            <button type="submit" id="selected-save" class="btn btn-block btn-success">Save</button>
         </div>
 
     </div>
@@ -54,36 +112,36 @@
 <script rel="script" type="text/javascript" src="js/jquery.min.js"></script>
 <script rel="script" type="text/javascript" src="js/jquery-ui.min.js"></script>
 <script rel="script" type="text/javascript" src="js/bootstrap.min.js"></script>
+<script rel="script" type="text/javascript" src="js/jquery.hc-sticky.min.js"></script>
+<script rel="script" type="text/javascript" src="js/jquery.tablecheckbox.min.js"></script>
 <script>
-    //    list topic
+    //    tab
     $(function () {
-        $("#accordion").accordion({
-            heightStyle: "fill"
-        });
+        $("#tabs").tabs();
     });
-    $(function () {
-        $("#accordion-resizer").resizable({
-            resize: function () {
-                $("#accordion").accordion("refresh");
-            }
-        });
-    });
+
     //    select
     $(function () {
-        $("#selectable").selectable();
+        $(".select-list").selectable();
     });
-    //    float
-    $(function () {
-        function position() {
-            $("#selected").position({
-                of: $(".col-sm-3"),
-                my: "left top",
-                at: "left top",
-                collision: "none none"
-            });
-        }
 
-        position();
+    //    float
+    $(function ($) {
+        $('#selected').hcSticky({
+            stickTo: "document"
+        });
+    });
+    // table
+    $('table').tablecheckbox({});
+
+    //    hover
+    $(function () {
+        $("tr").tooltip({
+            show: {
+                effect: "slideDown",
+                delay: 100
+            }
+        })
     });
 </script>
 </body>
